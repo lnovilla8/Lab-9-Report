@@ -1,10 +1,9 @@
 # Lab Report 9
 
-## Student Post
+### Student Post
 
 Hi everyone,
-I am working on a filter method that is used to extract a certain string from an array list. My first test works correctly, 
-but on my second tests, I do not get the expected output. I ran ```bash test.sh``` which has the command ```java -cp .:lib/* org.junit.runner.JUnitCore TestListExamples```. Any thoughts on how to fix this bug?
+I am working on a filter method that is used to extract a certain string from an array list. My tests do not work correctky and I am not getting the expected outputs. I ran ```bash test.sh``` which has the command ```java -cp .:lib/* org.junit.runner.JUnitCore TestListExamples```. Any thoughts on how to fix this bug? Could it be the structure of the filter method?
 
 ```TestExamples.java```
 ```
@@ -72,7 +71,10 @@ class ListEx {
             }
         }
             return result;
-        } 
+        }  
     }
 ```
+### TA Post
+Hi student! Maybe take a look at where the array you are returning comes from. What does making a variable static do to the variable? Should you be using the same array for each run of the method, or making a new one? Let me know what you try.
 
+### Student Response 
