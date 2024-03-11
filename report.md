@@ -3,7 +3,12 @@
 ### Student Post
 
 Hi everyone,
-I am working on a filter method that is used to extract a certain string from an array list. My tests do not work correctky and I am not getting the expected outputs. I ran ```bash test.sh``` which has the command ```java -cp .:lib/* org.junit.runner.JUnitCore TestListExamples```. Any thoughts on how to fix this bug? Could it be the structure of the filter method?
+I am working on a filter method that is used to extract a certain string from an array list. My tests do not work correctky and I am not getting the expected outputs. I ran ```bash test.sh``` which has the command :
+```
+javac -g -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+```
+Any thoughts on how to fix this bug? Could it be the structure of the filter method?
 
 ```TestExamples.java```
 ```
@@ -74,6 +79,8 @@ class ListEx {
         }  
     }
 ```
+Terminal:
+```
 <br> </br>
 ### TA Post
 Hi student! Maybe take a look at where the array you are returning comes from. What does making a variable static do to the variable? Should you be using the same array for each run of the method, or making a new one? Let me know what you try.
@@ -84,7 +91,6 @@ Thanks! I figured that using a static variable outside of the method would cause
 static List<String> filter(List<String> list, StrChecker sc) {
         List<String> result = new ArrayList<>();
         if(list.size() == 0) { return list; }
-        result.clear();
         for(String s: list) {
             if(sc.checkString(s)) {
                 result.add(s);
@@ -94,5 +100,12 @@ static List<String> filter(List<String> list, StrChecker sc) {
     }
 ```
 Terminal:
+```
+[user@sahara ~]$ bash test.sh
+JUnit version 4.13.2
+..
+Time: 0.005
+
+OK (2 tests)
 ```
 
