@@ -74,6 +74,7 @@ class ListEx {
         }  
     }
 ```
+<br> </br>
 ### TA Post
 Hi student! Maybe take a look at where the array you are returning comes from. What does making a variable static do to the variable? Should you be using the same array for each run of the method, or making a new one? Let me know what you try.
 
