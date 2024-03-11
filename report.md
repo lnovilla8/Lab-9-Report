@@ -78,4 +78,21 @@ class ListEx {
 ### TA Post
 Hi student! Maybe take a look at where the array you are returning comes from. What does making a variable static do to the variable? Should you be using the same array for each run of the method, or making a new one? Let me know what you try.
 
-### Student Response 
+### Student Response
+Thanks! I figured that using a static variable outside of the method would cause the values from previous method usages to remain in the array during subsequent method executions. I changed the result variable to be a local variable in the filter method. Here is my fixed method:
+```
+static List<String> filter(List<String> list, StrChecker sc) {
+        List<String> result = new ArrayList<>();
+        if(list.size() == 0) { return list; }
+        result.clear();
+        for(String s: list) {
+            if(sc.checkString(s)) {
+                result.add(s);
+            }
+        }
+        return result;
+    }
+```
+Terminal:
+```
+
