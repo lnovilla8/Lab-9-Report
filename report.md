@@ -7,11 +7,11 @@ I am working on a filter method that is used to extract a certain string from an
 ![IMAGE](testshfile.png)
 Any thoughts on how to fix this bug? Could it be the structure of the filter method?
 
-TestExamples.java
+```TestExamples.java```
 
 ![IMAGE](testlistexamples.png)
 
-ListEx.java
+```ListEx.java```
 
 ![IMAGE](listexamplesold.png)
 Terminal:
