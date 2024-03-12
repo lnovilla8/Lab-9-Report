@@ -8,10 +8,14 @@ I am working on a filter method that is used to extract a certain string from an
 Any thoughts on how to fix this bug? Could it be the structure of the filter method?
 
 ```TestExamples.java```
+
 ![IMAGE](testlistexamples.png)
+
 ```ListEx.java```
+
 ![IMAGE](listexamplesold.png)
 Terminal:
+
 ```
 [user@sahara ~]$ bash test.sh
 JUnit version 4.13.2
@@ -29,6 +33,7 @@ at TestListExamples.testFilter2(TestListExamples.java:39)
 FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
+
 ### TA Post
 Hi student! It seems like your second test method is failing. Maybe take a look at where the array you are returning comes from. What does making a variable static do to the variable? Should you be using the same array for each run of the method, or making a new one? Let me know what you try.
 
@@ -36,6 +41,7 @@ Hi student! It seems like your second test method is failing. Maybe take a look 
 Thanks! I figured that using a static variable ```result``` outside of the method would cause the values from previous method usages to remain in the array during subsequent method executions. I changed the result variable to be a local variable in the filter method as well as removed ```results.clear()``` so that instead, a new array list is created for each return. Here is my fixed method:
 ![IMAGE](listexamples.png)
 Terminal:
+
 ```
 [user@sahara ~]$ bash test.sh
 JUnit version 4.13.2
@@ -44,7 +50,7 @@ Time: 0.005
 
 OK (2 tests)
 ```
-<br> <br/>
+
 ![IMAGE](directorylab9.png)
 
 ## Reflection
