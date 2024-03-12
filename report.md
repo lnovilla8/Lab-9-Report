@@ -6,13 +6,10 @@ Hi everyone,
 I am working on a filter method that is used to extract a certain string from an array list. My tests do not work correctly and I am not getting the expected outputs. I ran ```bash test.sh``` which has the command :
 ![IMAGE](testshfile.png)
 Any thoughts on how to fix this bug? Could it be the structure of the filter method?
-```
-TestExamples.java
-```
+#### TestExamples
 ![IMAGE](testlistexamples.png)
-```
-ListEx.java
-```
+
+#### ListEx
 ![IMAGE](listexamplesold.png)
 Terminal:
 
