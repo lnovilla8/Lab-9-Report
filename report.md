@@ -10,7 +10,7 @@ Any thoughts on how to fix this bug? Could it be the structure of the filter met
 ```TestExamples.java```
 ![IMAGE](testlistexamples.png)
 ```ListEx.java```
-![IMAGE](listexamples.png)
+![IMAGE](listexamplesold.png)
 Terminal:
 ```
 [user@sahara ~]$ bash test.sh
@@ -34,18 +34,7 @@ Hi student! Maybe take a look at where the array you are returning comes from. W
 
 ### Student Response
 Thanks! I figured that using a static variable ```result``` outside of the method would cause the values from previous method usages to remain in the array during subsequent method executions. I changed the result variable to be a local variable in the filter method as well as removed ```results.clear()``` so that instead, a new array list is created for each return. Here is my fixed method:
-```
-static List<String> filter(List<String> list, StrChecker sc) {
-        List<String> result = new ArrayList<>();
-        if(list.size() == 0) { return list; }
-        for(String s: list) {
-            if(sc.checkString(s)) {
-                result.add(s);
-            }
-        }
-        return result;
-    }
-```
+![IMAGE](listexamples.png)
 Terminal:
 ```
 [user@sahara ~]$ bash test.sh
